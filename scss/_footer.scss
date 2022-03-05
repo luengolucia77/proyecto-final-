@@ -1,0 +1,42 @@
+@import "./variables";
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: $primary;
+}
+
+.footer_contactanos{
+    display: none;
+}
+
+.footer_pagos{
+   display: none;
+}
+.footer_seguinos{
+    display: flex;
+    flex-direction: column;
+    h4{
+        font-size:medium;
+    }
+ }
+
+ .footer_seguinos_img{
+     display: flex;
+     padding-left: 0px;
+     justify-content: space-around;
+     li{
+         display: inline-block;
+         padding-right: 5px;
+         a{
+             color: $colorletras;
+             text-decoration: none;
+         }
+         svg{
+             width: 30px;
+             height: 30px;
+         }
+     }
+ }

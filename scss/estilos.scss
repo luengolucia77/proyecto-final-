@@ -1,0 +1,128 @@
+@import "./variables";
+@import "./extend";
+/* --------HEADER---------- */
+@import "./header";
+/* --------MAIN---------- */
+@import "./main";
+/* --------FOOTER---------- */
+@import "./footer";
+/* --------TOCADOS Y PEINADOS ---------- */
+@import "./peinadosytocados";
+/* --------NOSOTROS---------- */
+@import "./nosotros";
+/* --------CONTACTANOS---------- */
+@import "./contactanos";
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FBFFE2;
+}
+
+/*---------------MEDIA-------------------*/
+@media screen and (min-width:769px) {
+    .header_nav{
+        background-image: url("./header.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        ul{
+            list-style-type: none;
+            padding: 2rem;
+            li{
+                display: inline-block;
+                margin-top: 1rem;
+                a{
+                    text-decoration:none;
+                    text-transform: uppercase;
+                    color: $colorletras;
+                    background-color: $primary;
+                    padding: 1.1rem;
+                    &:hover{
+                            background: $secondary;
+                    }
+                }
+             }
+         }
+    }
+    .main_abajo{
+        display:flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 2fr 1.5fr;
+        justify-items: center;
+        margin-top: 1rem;
+        gap: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        
+    }
+     /* ------------FOOTER------------- */
+    .footer{
+        display: flex;
+        padding: 1 rem;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .footer_contactanos{
+        display: block;
+        display: flex;
+        flex-direction:column;
+        h4{
+            font-size: medium;
+        }
+    }
+    .footer_contactanos_img{
+        padding-left:0px;
+        margin-bottom: 0px;
+    }
+    .footer_contactanos1{   
+            li{
+                list-style: none;
+                display: flex;
+                p{
+                    font-weight: bold;
+                }
+            }  
+       
+    }
+
+    .footer_pagos{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        h4{
+            font-size: medium;
+        }
+     }
+ 
+     .footer_pagos_img{
+         display: block;
+         display: flex;
+         padding-left: 0px;
+         justify-content: space-around;
+         li{
+             display: block;
+             display: inline-block;
+             color: $colorletras;
+             svg{
+                width: 30px;
+                height: 30px;
+             }
+         }
+     }
+}
